@@ -7,7 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
-using Comp229_Assign04.Models;
+using Comp229_Assign04.Model;
 
 namespace Comp229_Assign04.Account
 {

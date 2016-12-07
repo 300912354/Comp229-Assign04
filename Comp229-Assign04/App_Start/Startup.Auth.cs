@@ -7,7 +7,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using Comp229_Assign04.Models;
+using Comp229_Assign04.Model;
 
 namespace Comp229_Assign04
 {

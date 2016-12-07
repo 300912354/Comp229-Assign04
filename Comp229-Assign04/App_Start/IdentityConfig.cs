@@ -6,7 +6,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using Comp229_Assign04.Models;
+using Comp229_Assign04.Model;
 
 namespace Comp229_Assign04
 {
