@@ -5,19 +5,25 @@
     <div class="row">
         <div class="col-xs-12 col-md-4">
             <asp:Image runat="server" ID="modelImg" Width="200px" />
+            <asp:Button ID="Button1" runat="server" Text="Update_Link" OnClick="UpdateButton_Click" />
         </div>
         <div class="col-xs-12 col-md-8">
             <table>
                 <tr>
-                    <td>Name:</td>
-                    <td>
+                    <td >Name:</td>
+                    <td id="name_row" runat="server">
                         <asp:Label runat="server" ID="nameLabel" /></td>
+                     <td id="row1" runat="server">
+                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    </td>
                 </tr>
                 <tr>
                     <td>Faction:</td>
                     <td>
                         <asp:Label runat="server" ID="factionLabel" /></td>
+                   
                 </tr>
+                
                 <tr>
                     <td>Rank:</td>
                     <td>
@@ -181,4 +187,5 @@
                 </table>
             </td>
         </tr>
+    </table>
 </asp:Content>

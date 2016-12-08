@@ -51,8 +51,8 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/Home_page">Landing</a></li>
-                        <li><a runat="server" href="~/SingleModel">SingleModel</a></li>
-                     <%--  <li><a runat="server" href="~/Contact">Contact</a></li>--%>
+                        <li><a runat="server" href="~/SingleModel">Model_Page</a></li>
+                     <  <li><a runat="server" href="~/Update_Page">Update_Page</a></li>--%>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>

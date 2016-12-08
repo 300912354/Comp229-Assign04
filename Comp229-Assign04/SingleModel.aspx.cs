@@ -24,6 +24,8 @@ namespace Comp229_Assign04
             }
             _Model = Global.Models.FirstOrDefault(tModel => tModel.name == name && tModel.faction == faction);
             SetBindings();
+            name_row.Visible = true;
+            row1.Visible = false;
         }
         private void SetBindings()
         {
@@ -63,14 +65,22 @@ namespace Comp229_Assign04
 
         }
 
-        protected void UpdateButton_Click(object sender, EventArgs e)
+        protected  void UpdateButton_Click(object sender, EventArgs e)
 
         {
 
             _Model.name = "new name";
             var one = Global.Models;
             var two = 2;
-
+          Global.UpdateNewJsonFile();
+            
         }
+
+        //protected void Button1_Click(object sender, EventArgs e)
+        //{
+        //    //Response.Redirect("~/Update_Page.aspx");
+        //    name_row.Visible = false;
+        //    row1.Visible = true;
+        //}
     }
 }

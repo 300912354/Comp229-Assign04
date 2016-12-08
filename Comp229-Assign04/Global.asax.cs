@@ -34,7 +34,7 @@ namespace Comp229_Assign04
 
             }
         }
-        public void UpdateNewJsonFile()
+        public  static void UpdateNewJsonFile()
         {
             using (StreamWriter StreamWriter = File.CreateText(System.Web.Hosting.HostingEnvironment.MapPath(ModelsJsonFilePath)))
             {
