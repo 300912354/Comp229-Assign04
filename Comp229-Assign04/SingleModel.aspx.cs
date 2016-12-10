@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Comp229_Assign04.Models;
+using System.IO;
+
 namespace Comp229_Assign04
 {
     public partial class Contact : Page
@@ -15,17 +17,27 @@ namespace Comp229_Assign04
         private Models.Model _Model;
         protected void Page_Load(object sender, EventArgs e)
         {
-            var name = Request.QueryString["name"];
-            var faction = Request.QueryString["faction"];
-            if (string.IsNullOrEmpty(name))
+            if (!IsPostBack)
             {
-                Response.Redirect("~/Home_Page.aspx");
-                return;
+                //utton2.Text=thisPlace.Button2;
             }
-            _Model = Global.Models.FirstOrDefault(tModel => tModel.name == name && tModel.faction == faction);
-            SetBindings();
-            name_row.Visible = true;
-            row1.Visible = false;
+            try
+            {
+                var name = Request.QueryString["name"];
+                var faction = Request.QueryString["faction"];
+                if (string.IsNullOrEmpty(name))
+                {
+                    Response.Redirect("~/Home_Page.aspx");
+                    return;
+                }
+                _Model = Global.Models.FirstOrDefault(tModel => tModel.name == name && tModel.faction == faction);
+                SetBindings();
+                name_row.Visible = true;
+                row1.Visible = false;
+            }
+            catch (Exception ex)
+            {
+            }
         }
         private void SetBindings()
         {
@@ -40,11 +52,11 @@ namespace Comp229_Assign04
             deploymentzoneLabel.Text = _Model.deploymentZone;
 
 
-            traitsRepeater.DataSource = _Model.traits;    // you don't have the repeaters in your singleModel page
+            traitsRepeater.DataSource = _Model.traits;    
             traitsRepeater.DataBind();
 
 
-            typeRepeater.DataSource = _Model.types; // you don't have the repeaters in your singleModel page
+            typeRepeater.DataSource = _Model.types; 
             typeRepeater.DataBind();
 
             defenceChartRepeater.DataSource = _Model.defenseChart;
@@ -65,22 +77,45 @@ namespace Comp229_Assign04
 
         }
 
-        protected  void UpdateButton_Click(object sender, EventArgs e)
+        //protected void UpdateButton_Click(object sender, EventArgs e)
 
-        {
-
-            _Model.name = "new name";
-            var one = Global.Models;
-            var two = 2;
-          Global.UpdateNewJsonFile();
-            
-        }
-
-        //protected void Button1_Click(object sender, EventArgs e)
         //{
-        //    //Response.Redirect("~/Update_Page.aspx");
-        //    name_row.Visible = false;
-        //    row1.Visible = true;
+
+        //    _Model.name = "new name";
+        //    var one = Global.Models;
+        //    var two = 2;
+        //    Global.UpdateNewJsonFile();
+
         //}
+
+    //    protected void Button1_Click(object sender, EventArgs e)
+    //    {
+    ////      var theValue = this.Context.Request[this.TextBox1.ClientID];
+    //        Button2.Visible = true;
+    //        TextBox1.Text = _Model.name;
+    //        //_Model.name = "Sword Strike";
+    //        //Response.Redirect("~/Update_Page.aspx");
+    //        name_row.Visible = false;
+    //        row1.Visible = true;
+    //        var one = Global.Models;
+    //        var two = 2;
+    //      //  Global.UpdateNewJsonFile();
+    //       //utton1.Visible = false;
+    //    }
+        protected void UpdateButton1_Click(object sender, EventArgs e)
+        {
+            //row1.Visible = true;
+            //TextBox1.Text = _Model.name;
+
+            //Button1.Visible = true;
+            //Button2.Visible = false;
+            //Global.UpdateNewJsonFile();
+            _Model.name = NameTextBox.Text;
+            var one = Global.Models;
+            _Model.faction = FactionTextBox.Text;
+            // var two = ;
+            Global.UpdateNewJsonFile();
+
+        }
     }
 }

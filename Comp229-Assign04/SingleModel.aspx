@@ -2,19 +2,22 @@
     Inherits="Comp229_Assign04.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="row">
+    
+    <div class="jumbotron">
         <div class="col-xs-12 col-md-4">
             <asp:Image runat="server" ID="modelImg" Width="200px" />
-            <asp:Button ID="Button1" runat="server" Text="Update_Link" OnClick="UpdateButton_Click" />
+         <%--  <asp:Button ID="Button1" runat="server" Text="Update_Link" />--%>
+           <%-- <asp:Button ID="Button2" runat="server" Text="saveClick" OnClick="Button2_Click" Visible="false" />--%>
         </div>
         <div class="col-xs-12 col-md-8">
             <table>
                 <tr>
+                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                     <td >Name:</td>
                     <td id="name_row" runat="server">
                         <asp:Label runat="server" ID="nameLabel" /></td>
                      <td id="row1" runat="server">
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                       
                     </td>
                 </tr>
                 <tr>
@@ -188,4 +191,21 @@
             </td>
         </tr>
     </table>
+    <div class="jumbotron">
+       
+          <h2>UPDATION</h2>
+      
+         <asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
+
+         <asp:TextBox ID="NameTextBox" class="form-control" runat="server"></asp:TextBox>
+
+        
+         <asp:Label ID="Label2" runat="server" Text="Name"></asp:Label>
+
+         <asp:TextBox ID="FactionTextBox" class="form-control" runat="server"></asp:TextBox>
+
+         <asp:Button ID="Button3" runat="server" Text="Update" OnClick="UpdateButton1_Click" />
+
+       
+         </div>
 </asp:Content>

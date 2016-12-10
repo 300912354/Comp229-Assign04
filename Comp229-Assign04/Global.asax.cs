@@ -36,7 +36,7 @@ namespace Comp229_Assign04
         }
         public  static void UpdateNewJsonFile()
         {
-            using (StreamWriter StreamWriter = File.CreateText(System.Web.Hosting.HostingEnvironment.MapPath(ModelsJsonFilePath)))
+            using (StreamWriter StreamWriter = File.CreateText(System.Web.Hosting.HostingEnvironment.MapPath(ModelsNewJsonFilePath)))
             {
                 StreamWriter.WriteLine(JsonConvert.SerializeObject(Models));
             }
@@ -70,7 +70,8 @@ namespace Comp229_Assign04
                 message.Attachments.Add(new Attachment(System.Web.Hosting.HostingEnvironment.MapPath(ModelsNewJsonFilePath), contentType));
 
                 smtpClient.Send(message);
-                //statusLabel.Text = "Email sent.";
+               
+               //statusLabel.Text = "Email sent.";
             }
             catch (Exception ex)
             {
