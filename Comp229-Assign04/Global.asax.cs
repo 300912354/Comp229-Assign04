@@ -1,19 +1,21 @@
-﻿using System.IO;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Optimization;
 using System.Web.Routing;
-using System.Net.Mail;
-using Newtonsoft.Json;
-using System.Collections.Generic;
-using System;
-
+using System.Web.Security;
+using System.Web.SessionState;
 namespace Comp229_Assign04
 {
     public class Global : HttpApplication
     {
         public static IEnumerable<Models.Model> Models;
         public const string ModelsJsonFilePath = "~/Data/Assign04.json";
-        private const string ModelsNewJsonFilePath = "~/Data/NewAssign04.json";
+        public const string ModelsNewJsonFilePath = "~/Data/NewAssign04.json";
 
 
         void Application_Start(object sender, EventArgs e)
@@ -55,7 +57,7 @@ namespace Comp229_Assign04
                 message.From = fromAddress;
                 message.To.Add(toAddress);
                 message.Subject = "Comp229-Assign04 email";
-                message.Body = "This is the body of a sample message";
+                message.Body = "Hope this works";
 
                 smtpClient.Host = "smtp-mail.outlook.com";
                 smtpClient.EnableSsl = true;
@@ -70,13 +72,14 @@ namespace Comp229_Assign04
                 message.Attachments.Add(new Attachment(System.Web.Hosting.HostingEnvironment.MapPath(ModelsNewJsonFilePath), contentType));
 
                 smtpClient.Send(message);
-               
-               //statusLabel.Text = "Email sent.";
+
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                //statusLabel.Text = "Coudn't send the message!";
+
+
             }
+
         }
     }
 }

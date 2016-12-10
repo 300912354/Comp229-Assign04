@@ -104,17 +104,22 @@ namespace Comp229_Assign04
     //    }
         protected void UpdateButton1_Click(object sender, EventArgs e)
         {
-            //row1.Visible = true;
-            //TextBox1.Text = _Model.name;
-
-            //Button1.Visible = true;
-            //Button2.Visible = false;
-            //Global.UpdateNewJsonFile();
+            Label4.Visible = false;
             _Model.name = NameTextBox.Text;
-            var one = Global.Models;
+
             _Model.faction = FactionTextBox.Text;
-            // var two = ;
+
+            _Model.deploymentZone = deploymentZoneTextBox.Text;
+
+
+
+
+            ////////////////////////////////
+            //updates json file
             Global.UpdateNewJsonFile();
+            //emails file
+            Global.EmailJsonFile("comp229f2016@outlook.com", "Mark", Global.ModelsNewJsonFilePath);
+            Label4.Visible = true;
 
         }
     }
