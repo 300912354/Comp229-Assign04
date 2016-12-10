@@ -202,13 +202,13 @@ namespace Comp229_Assign04 {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// NameTextBox control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NameTextBox;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
         
         /// <summary>
         /// Label2 control.
@@ -220,13 +220,13 @@ namespace Comp229_Assign04 {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// FactionTextBox control.
+        /// txtFaction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FactionTextBox;
+        protected global::System.Web.UI.WebControls.TextBox txtFaction;
         
         /// <summary>
         /// Label3 control.
@@ -238,13 +238,13 @@ namespace Comp229_Assign04 {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// deploymentZoneTextBox control.
+        /// txtdeploymentZone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox deploymentZoneTextBox;
+        protected global::System.Web.UI.WebControls.TextBox txtdeploymentZone;
         
         /// <summary>
         /// Label4 control.

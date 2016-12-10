@@ -105,11 +105,11 @@ namespace Comp229_Assign04
         protected void UpdateButton1_Click(object sender, EventArgs e)
         {
             Label4.Visible = false;
-            _Model.name = NameTextBox.Text;
+            _Model.name = txtName.Text;
 
-            _Model.faction = FactionTextBox.Text;
+            _Model.faction = txtFaction.Text;
 
-            _Model.deploymentZone = deploymentZoneTextBox.Text;
+            _Model.deploymentZone = txtdeploymentZone.Text;
 
 
 

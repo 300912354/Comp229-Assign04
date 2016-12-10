@@ -191,29 +191,29 @@
             </td>
         </tr>
     </table>
-    <div class="jumbotron">
+    <div class="row">
        
-          <h2>Change profile</h2>
-      <
+          <h2>UPDATION</h2>
+      
          <asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
 
-         <asp:TextBox ID="NameTextBox" class="form-control" runat="server"></asp:TextBox>
+         <asp:TextBox ID="txtName" class="form-control" runat="server"></asp:TextBox>
 
-        <%-- faction--%>
+        
          <asp:Label ID="Label2" runat="server" Text="Faction"></asp:Label>
 
-         <asp:TextBox ID="FactionTextBox" class="form-control" runat="server"></asp:TextBox>
+         <asp:TextBox ID="txtFaction" class="form-control" runat="server"></asp:TextBox>
 
-        <%-- Rank--%>
+       
 
          <asp:Label ID="Label3" runat="server" Text="DeploymentZone"></asp:Label>
 
-         <asp:TextBox ID="deploymentZoneTextBox" class="form-control" runat="server"></asp:TextBox>
+         <asp:TextBox ID="txtdeploymentZone" class="form-control" runat="server"></asp:TextBox>
 
          <asp:Label ID="Label4" runat="server" Text="email sent"></asp:Label>
          <br />
-        <%-- update button--%>
-         <asp:Button ID="Button1" runat="server" Class="btn btn-default" Text="Update and send email" OnClick="UpdateButton1_Click" />
+        
+         <asp:Button ID="Button1" runat="server" Class="btn btn-default" Text="Changes and email_data" OnClick="UpdateButton1_Click" />
 
        
          </div>
